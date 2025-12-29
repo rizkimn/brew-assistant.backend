@@ -1,4 +1,4 @@
-import { timestamps } from '../columns.helper.js';
+import { timestamps } from '../columns.helper';
 import { beans } from './beans';
 import { grinders } from './grinders';
 import { v60Recipes } from './v60Recipes';

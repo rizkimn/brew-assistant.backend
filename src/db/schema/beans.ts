@@ -1,4 +1,4 @@
-import { timestamps } from '../columns.helper.js';
+import { timestamps } from '../columns.helper';
 import {
   int,
   mysqlEnum,

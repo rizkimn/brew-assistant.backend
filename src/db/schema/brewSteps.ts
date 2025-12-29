@@ -1,4 +1,4 @@
-import { agitations, waterfalls, timestamps } from '../columns.helper.js';
+import { agitations, waterfalls, timestamps } from '../columns.helper';
 import { brewSessions } from './brewSessions';
 import {
   int,
