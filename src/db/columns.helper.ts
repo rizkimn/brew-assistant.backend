@@ -1,12 +1,13 @@
+import { sql } from 'drizzle-orm';
 import { timestamp } from 'drizzle-orm/mysql-core';
 
 export const timestamps = {
-  createdAt: timestamp('created_at').defaultNow().notNull(),
+  createdAt: timestamp('created_at').default(sql`CURRENT_TIMESTAMP`).notNull(),
   updatedAt: timestamp('updated_at')
-    .defaultNow()
+    .default(sql`CURRENT_TIMESTAMP`)
     .onUpdateNow()
     .notNull(),
-  deleted_at: timestamp(),
+  deleted_at: timestamp('deleted_at'),
 }
 
 export const agitations = [
