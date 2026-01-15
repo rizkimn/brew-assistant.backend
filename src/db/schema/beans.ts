@@ -10,13 +10,11 @@ import {
 export const beans = mysqlTable('beans', {
   id: int('id').autoincrement().primaryKey(),
   name: varchar('name', { length: 255 }).notNull(),
+  imageSrc: varchar('image_src', { length: 512 }),
+  roaster: varchar('roaster', { length: 255 }),
   origin: varchar('origin', { length: 255 }),
   varietal: varchar('varietal', { length: 255 }),
-  process: mysqlEnum('process', [
-    'washed',
-    'natural',
-    'honey',
-  ]).notNull(),
+  process: varchar('process', { length: 255 }).notNull(),
   roastLevel: mysqlEnum('roast_level', [
     'light',
     'medium',
